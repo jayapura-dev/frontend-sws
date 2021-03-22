@@ -1,114 +1,75 @@
-<p align="center"><img src="https://live.staticflickr.com/65535/49846512092_cd3986a7f6_b.jpg" width="600px"></p>
+# WHISTLEBLOWER SYSTEM
 
-<p align="center">
-  <a href="https://travis-ci.com/Ekhel/backend-kawal-corona-papua"><img src="https://travis-ci.com/Ekhel/backend-kawal-corona-papua.svg?branch=master" alt="Build Status" target="_blank"></a>
-  <a href="https://gitter.im/jayapura_django/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/jayapura_django/community.svg" alt="Gitter" target="_blank"></a>
-  <a href="https://github.com/Ekhel/frontend-kawal-corona-papua/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT" target="_blank"></a>
-</p>
+**SISTEM PENGADUAN ELEKTRONIK**
 
-## Tentang Info Corona Papua :
-  - Info Corona Papua adalah Web Applikasi sekaligus dapat Menjadi Portal Informasi Live Data Kasus Covid 19 di Papua, Sedikit Sumbangsih dari Kami untuk Papua, Project ini Open Source, Siapa Saja Boleh untuk Berkontribusi.
-
-<p align="center"><img src="https://github.com/Ekhel/KawalCoronaPapua/blob/master/assets/backend/images/repo%20mockup%20dashboard.jpg" width="800px"></p>
-------------------------------------------------------------------------------------------------------------------------
+![Imgur](https://i.imgur.com/kuQlc7v.png)
 
 ## System Requirements :
-* Bahasa Utama :
+* Bahasa :
   - PHP
 
 * Framework :
-  - CodeIgniter 3.1
+  - CodeIgniter
 
 * DBMS :
-  - MySql
-  - Postgre
+  - MariaDB
 
-* Library :
-  - Indo Tanggal
-  - REST_Controllers
+* Template :
+  - Frontend (Safario)
+  - Backend (Admin Pro +)
 
-* Backend :
-  - [Kawal Corona Papua](https://github.com/Ekhel/frontend-kawal-corona-papua)
+-----------------------------------------------------------------------------------
 
-------------------------------------------------------------------------------
+## Deskripsi Applikasi
+* Fungsi Utama Applikasi ini diperutukan untuk Kampung,Desa, agar Dapat melakukan Pengaduan terhadap bentuk Penggunaan Keuangan Desa/Kampung.
 
-## API Services  :
+-----------------------------------------------------------------------------------
 
-* API Services Live Data Indonesia & Provinsi :
-  - [Data Indonesia : https://api.kawalcorona.com/indonesia](https://api.kawalcorona.com/indonesia)
+## Fitur Applikasi
+  - [ ] Input Pengaduan
+  - [ ] Cek Pengaduan
+  - [x] Login Backend Administrator
+  - [x] Dashboard Applikasi
+  - [x] CRUD Distrik
+  - [x] CRUD Kampung
 
-  - [Data Provinsi : https://api.kawalcorona.com/indonesia/provinsi](https://api.kawalcorona.com/indonesia/provinsi)
+-----------------------------------------------------------------------------------
 
-  - [Data Global Per Negara : https://api.kawalcorona.com/](https://api.kawalcorona.com/) 
+## Proses Pembuatan dan Pengembangan
 
-  - [Data Global Positif : https://api.kawalcorona.com/positif/](https://api.kawalcorona.com/positif)
+* **Minggu 9 Februari 2020**
+  - Buat Repository Github [Solved]
+  - Buat Clone Repository dan Buat Project App [Solved]
+  - Buat Applikasi [Solved]
+  - Migrasi DB User dan Roles [Solved]
+  - Buat Super User Administrator [Solved]
 
-  - [Data Global Meninggal : https://api.kawalcorona.com/meningggal/](https://api.kawalcorona.com/meniggal)
-  
-  - [Data Global Sembuh : https://api.kawalcorona.com/sembuh/](https://api.kawalcorona.com/sembuh)
+* **Senin 10 Februari 2020**
+  - Copy Template untuk Frontend dan Backend [Solved]
 
-* API Services Kusus Data Papua :
-  - [Data Papua : http://localhost/api](http://localhost/KawalCoronaPapua/api/)
-    * Sample Response :
+* **Selasa 11 Februari 2020**
+  - Buat Halaman Front (Home)[Solved]
+  - Buat Halaman Backend (Login)  [Solved]
+  - Buat Fungsi Authentikasi [Solved]
+  - Buat Halaman Dashboard [Solved]
 
-      ```javascripts
-      {
-        "status": true,
-        "result": [
-          {
-            "name": "papua",
-            "confirm": "240",
-            "perawatan": "174",
-            "sembuh": "59",
-            "meninggal": "7"
-          }
-        ]
-      }
-      ```
+* **Selasa 12 Februari 2020**
+  - Buat Halaman Pengaduan [Solved]
+  - Buat Model Distrik dan Kampung [Solved]
+  - Buat Halaman View Distrik dan Kampung [Solved]
+  - Buat Halaman Create Distrik dan Kampung [Solved]
 
-  - [Data Kabupaten : http://localhost/api/kabupaten](http://localhost/KawalCoronaPapua/api/kabupaten)
-  - [Data Kabupaten (Params) : http://localhost/api/kabupaten?id_kabupaten=1](http://localhost/KawalCoronaPapua/api/kabupaten?id_kabupaten=1)
-    * Sample Response :
-    * Dengan Parameter id_kabupaten
+* **Jumat 14 Februari 2020**
+  - Buat Fungsi CRUD Distrik [NotSolved]
+  - Buat Fungsi CRUD Kampung [NotSolved]
 
-      ```javascripts
-      {
-        "status": true,
-        "id_kabupaten": "1",
-        "result": [
-          {
-            "id_kabupaten": "1",
-            "kabupaten": "Jayapura",
-            "confirm": "36",
-            "perawatan": "25",
-            "meninggal": "1",
-            "sembuh": "10",
-            "logo_thumb": "http://localhost/KawalCoronaPapua/assets/backend/images/kabkota/Jayapura.png"
-          }
-        ]
-      }
-      ```
+* **Jumat 13 Maret 2020**
+  - Buat Table pengaduan(tb_aduan) [Solved]
+  - Buat Fungsi Kirim Aduan (Create) [Solved]
+  - Buat CRUD Distrik [Solved]
+  - Buat CRUD Kampung [Solved]
 
-
-----------------------------------------------------------------------------------------------------------
-
-## Halaman Yang Tersedia :
-  - [x] Dashboard
-  - [x] Hotline
-  - [x] API For developers
-
---------------------------------------------------------------------------------------------------------------
-
-
-## Kontribusi Data & Project :
-  - Saya Belum Memiliki Sumber Data yang benar" valid.
-  - Sebagian Data Kasus di Provinsi Papua yang ada pada database backend diambil dari 60% Hasil Tracking Media.
-  - Jika teman" ingin Berkontribusi terkait data dengan sangat senang hati saya akan menerima.
-  - email saya terkait Data : **michaekarafir@gmail.com**
-  - Atau bisa chat pada gitter klik pada badge gitter diatas, **chat on gitter**
-  - Project ini Open Source siapa saja boleh untuk Berkontribusi Termasuk Data dan Repository.
-  - Saran dan Masukan Sangat Saya butuhkan.
-
-  Salam Sehat
-  Michael.
-    
+* **Minggu 15 Maret 2020**
+  - Buat CRUD Pengaduan [Not Solved]
+  - Buat View Pengaduan [Solved]
+  - Buat Notif Aduan Masuk [Solved]
