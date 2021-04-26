@@ -8,4 +8,10 @@ class M_aduan extends CI_model{
 
         return $query->result();
     }
+
+    function distrik(){
+        $query = $this->db->query("SELECT * FROM tb_distrik");
+
+        return $query->result();
+    }
 }

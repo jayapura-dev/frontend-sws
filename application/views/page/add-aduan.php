@@ -1,3 +1,17 @@
+<div class="hero-section app-hero">
+    <div class="container">
+        <div class="hero-content app-hero-content text-center">
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">
+                        FORM PENGADUAN
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="flex-features" id="features">
     <div class="container">
         <div class="row">
@@ -5,7 +19,7 @@
                 <div class="ui container">
                     <div class="ui padded segment">
                         <h1>
-                            Perhatian !! <br/>Mohon Isilah Form Pengaduan dengan Data yang benar, dan tidak Ambigu, Jika Belum Mengerti dengan Isian Form Silahkan Pergi ke <a href="#">Tata Cara Pengisian Form Aduan.</a>
+                            Perhatian !! <br/>Mohon Isilah Form Pengaduan dengan Data yang benar, dan tidak Ambigu, Jika Belum Mengerti dengan Isian Form Silahkan Pergi ke <a href="<?php echo base_url()?>Aduan/petunjuk">Tata Cara Pengisian Form Aduan.</a>
                             <br />
                         </h1>
                     </div>
@@ -20,7 +34,6 @@
                                     <label class="text-center"><strong><h2>DATA DIRI</h2></strong></label>
                                 </div>
                                 <hr />
-                                
                                 <div class="form-group">
                                     <div class="col-xs-6">
                                         <input type="text" class="form-control" name="nama_pengadu" placeholder="Nama Lengkap Anda" required="true" />
@@ -40,44 +53,33 @@
                                     <label class="text-center"><h4>PENGADUAN & LOKASI TEMPAT KEJADIAN</h4></label>
                                 </div>
                                 <hr />
+
                                 <div class="form-group">
                                     <div class="col-xs-6">
                                         <input type="text" class="form-control" name="title" required="true" placeholder="Judul Aduan Anda" />
                                     </div>
                                 </div>
-                                <!-- <div class="form-group">
-                                    <div class="col-xs-6">
-                                        <select type="text" class="form-control" name="kategori" required={true}>
-                                            <option value="0">--- Pilih Kategori ---</option>
-                                            
-                                            
-                                        </select>
-                                    </div>
-                                </div> -->
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <select name="id_pangkat" class="chosen-select form-control">
-                                            <option value="">-- Pilih --</option>
-                                            <?php
-                                            foreach($distrik as $p => $val)
-                                            {?>
-                                            <option value="<?php echo $val->id_distrik;?>"><?php echo $val->distrik; ?></option>
-                                            <?php
-                                            }?>
+                                        <select name="id_distrik" class="chosen-select form-control">
+                                                <option value="">-- Pilih --</option>
+                                                <?php
+                                                foreach($distrik as $p => $val)
+                                                {?>
+                                                <option value="<?php echo $val->id_distrik;?>"><?php echo $val->distrik; ?></option>
+                                                <?php
+                                                }?>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <select type="text" class="form-control" name="kampung">
-                                            <option value="0">--- Pilih Kampung ---</option>
-                                            
-                                        </select>
+                                        <input type="text" class="form-control" name="kampung" required="true" placeholder="Kampung" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <textarea class="form-control" name="deskripsi_aduan" defaultValue="Isi Aduan Anda . . ." />
+                                        <textarea name="deskripsi" id="" cols="30" placeholder="isi aduan" rows="10"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -114,3 +116,4 @@
         </div>
     </div>
 </div>
+

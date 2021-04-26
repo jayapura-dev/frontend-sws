@@ -16,8 +16,14 @@ class Aduan extends CI_Controller {
         $this->template->load('frontend_site','page/aduan',$data);
     }
 
-    public function create(){
+    public function create_aduan(){
         $data['title'] = 'Form Pengaduan';
-        $this->template->load('frontend_site','page/c-aduan',$data);
+        $data['distrik'] = $this->M_aduan->distrik();
+        $this->template->load('frontend_site','page/add-aduan',$data);
+    }
+
+    public function petunjuk(){
+        $data['title'] = 'Petunjuk Penulisan Pengaduan';
+        $this->template->load('frontend_site','page/petunjuk',$data);
     }
 }

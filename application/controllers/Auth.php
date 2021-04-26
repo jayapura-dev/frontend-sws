@@ -34,7 +34,7 @@ class Auth extends CI_Controller {
 				  $this->session->set_userdata($data);
   
 				  	if ($this->session->userdata('level')=='3'){
-					  redirect('Home');
+					  redirect('Aduan');
 					}
 					
 					else {

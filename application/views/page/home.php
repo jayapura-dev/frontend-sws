@@ -13,10 +13,10 @@
                         Masyarakat dapat Melakukan Pengaduan atas Dugaan adanya Gratifikasi, Korupsi, Manipulasi dan sejenisnya yang berpotensi merugikan Daerah/Negara dan
                         Turut Serta dalam Mewujudkan Pelayanan Masyarakat yang lebih baik.
                     </p>
-                    <?php if($this->session->userdata('nama')): ?>
-                        <button class="btn btn-primary btn-action" data-wow-delay="0.2s"><a href="<?php echo base_url()?>">FORM ADUAN</a> </button>
+                    <?php if($this->session->userdata('username') === NULL): ?>
+                        <button class="btn btn-primary btn-action" data-wow-delay="0.2s"><a href="<?php echo base_url()?>Register">DAFTAR</a> </button>              
                     <?php else: ?>
-                        <button class="btn btn-primary btn-action" data-wow-delay="0.2s"><a href="<?php echo base_url()?>">DAFTAR</a> </button>
+                        <button class="btn btn-primary btn-action" data-wow-delay="0.2s"><a href="<?php echo base_url()?>Aduan/create_Aduan">FORM ADUAN</a> </button>
                     <?php endif ?>
                 </div>
                 <div class="col-md-12">

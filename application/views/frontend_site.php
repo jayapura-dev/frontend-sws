@@ -33,8 +33,6 @@
     <link href="<?php echo base_url()?>assets\frontend\css\card.css" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url()?>assets\frontend\css\card2.css" rel="stylesheet" type="text/css">
 
-    <!-- Leaflet css -->
-    <!--<link rel="stylesheet" href="<?php echo base_url()?>assets\leaflet\leaflet.css" />!-->
 </head>
 <body>
     <div class="wrapper animsition" data-animsition-in-class="fade-in" data-animsition-in-duration="1000" data-animsition-out-class="fade-out" data-animsition-out-duration="1000">
@@ -120,13 +118,6 @@
     <script type="text/javascript" src="<?php echo base_url()?>assets\frontend\js\custom.js"></script>
 
     <script type="text/javascript" src="<?php echo base_url()?>assets\frontend\prism\custom-prism.js"></script>
-
-    <!-- Leaflet -->
-
-
-    <!--<script type="text/javascript" src="<?php echo base_url()?>assets\leaflet\leaflet.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>assets\leaflet-providers\leaflet-providers.js"></script>
-    <script type="text/javascript" src="https://rawgithub.com/ismyrnow/Leaflet.groupedlayercontrol/master/src/leaflet.groupedlayercontrol.js"></script>!-->
 
     
 </body>

@@ -3,9 +3,9 @@
         <div class="hero-content app-hero-content text-center">
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
-                    <p class="wow fadeInUp" data-wow-delay="0.2s">
-                        FORM PENGADUAN
-                    </p>
+                    <h2 class="wow fadeInUp" data-wow-delay="0.2s">
+                        DATA ADUAN
+                    </h2>
                     
                 </div>
             </div>
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-md-12">
-                <a href="<?php echo base_url()?>Aduan/create" class="ui button teal"><i class="fa fa-plus-circle"></i>FORM ADUAN</a>
+                <a href="<?php echo base_url()?>Aduan/create_aduan" class="ui button teal"><i class="fa fa-plus-circle"></i>FORM ADUAN</a>
                 <hr />
                 <div class="card table-card">
                     <div class="card-block">
@@ -38,7 +38,15 @@
                                     <td><?php echo $no++ ?></td>
                                     <td><?php echo $i->terlapor ?></td>
                                     <td><?php echo $i->date_created ?></td>
-                                    <td></td>
+                                    <td class="col-md-2 text-center">
+                                        <img src="<?php echo base_url()?>assets/images/icon/checked.png" title="aduan dikirim"></img>
+                                        <?php if($i->status_read == '1'){?>
+                                            <img src="<?php echo base_url()?>assets/images/icon/open-email.png" title="aduan Terbaca"></img>
+                                        <?php } ?>
+                                        <?php if($i->status_pemeriksa == '1'){?>
+                                            <img src="<?php echo base_url()?>assets/images/icon/forward.png" title="Aduan diteruskan Ke Pemeriksa"></img>
+                                        <?php } ?>
+                                    </td>
                                 </tr>
                               <?php } ?>
                             </tbody>
