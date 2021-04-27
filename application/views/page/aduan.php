@@ -27,6 +27,7 @@
                                     <th>No</th>
                                     <th>Terlapor</th>
                                     <th>Tanggal</th>
+                                    <th>Action</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -38,6 +39,9 @@
                                     <td><?php echo $no++ ?></td>
                                     <td><?php echo $i->terlapor ?></td>
                                     <td><?php echo $i->date_created ?></td>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url()?>Aduan/detail_aduan/<?php echo $i->id_aduan ?>"><i class="clipboard outline icon"></i></a>
+                                    </td>
                                     <td class="col-md-2 text-center">
                                         <img src="<?php echo base_url()?>assets/images/icon/checked.png" title="aduan dikirim"></img>
                                         <?php if($i->status_read == '1'){?>

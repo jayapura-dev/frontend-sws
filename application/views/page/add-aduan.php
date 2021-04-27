@@ -24,7 +24,7 @@
                         </h1>
                     </div>
                     <br />
-                    <form class="ui form">
+                    <form class="ui form" action="<?php echo base_url()?>Aduan/send_aduan" method="post" enctype="multipart/form-data">
                         <div class="card">
                             <div class="card-header">
                                 <h2>FORM PENGADUAN</h2>
@@ -36,17 +36,18 @@
                                 <hr />
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="nama_pengadu" placeholder="Nama Lengkap Anda" required="true" />
+                                        <input type="text" class="form-control" name="nama" value="<?php echo $user['nama_lengkap']; ?>" readonly="true" />
+                                        <input type="hidden" class="form-control" name="id_user" value="<?php echo $user['id_user']; ?>" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="email" class="form-control" name="email" placeholder="Email Anda" required="true" />
+                                        <input type="email" class="form-control" name="email" value="<?php echo $user['email']; ?>" readonly="true" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="text" class="form-control" required="true" name="no_telfon" placeholder="No Kontak Anda" />
+                                        <input type="text" class="form-control" name="kontak" value="<?php echo $user['kontak']; ?>" readonly="true" />
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -56,7 +57,7 @@
 
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="title" required="true" placeholder="Judul Aduan Anda" />
+                                        <input type="text" class="form-control" name="judul_aduan" required="true" placeholder="Judul Aduan Anda" />
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -79,7 +80,13 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <textarea name="deskripsi" id="" cols="30" placeholder="isi aduan" rows="10"></textarea>
+                                        <input type="text" class="form-control" name="terlapor" required="true" placeholder="Terlapor" />
+                                        <input type="hidden" class="form-control" name="date_created" value="<?php echo date('Y-m-d') ?>" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <textarea name="permasalahan" id="" cols="30" placeholder="Isi Aduan Anda" rows="10"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -87,7 +94,8 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="file" class="form-control" name="file" />
+                                        <input type="file" class="form-control" name="file_path" />
+                                        <label class="text-center"><h4>Ukuran File Tidak Lebih dari 15Mb dan Menggunakan Format .PDF</h4></label>
                                     </div>
                                 </div>
                                 <div class="form-group">

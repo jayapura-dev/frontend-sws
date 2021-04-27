@@ -23,17 +23,17 @@
                                 
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="nama_pengadu" placeholder="Nama Lengkap Anda" required="true" />
+                                        <input type="text" class="form-control" name="nama_pengadu" value="<?php echo $user['nama_lengkap'] ?>" readonly="true" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="email" class="form-control" name="email" placeholder="Email Anda" required="true" />
+                                        <input type="email" class="form-control" name="email" value="<?php echo $user['email'] ?>" readonly="true" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
-                                        <input type="text" class="form-control" required="true" name="no_telfon" placeholder="No Kontak Anda" />
+                                        <input type="text" class="form-control" readonly="true" name="no_telfon" value="<?php echo $user['kontak'] ?>" />
                                     </div>
                                 </div>
                                 <div class="form-group">
